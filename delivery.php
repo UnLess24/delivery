@@ -7,6 +7,9 @@ class Delivery
   private $firstPeriodPrice = NULL;
   private $secondPeriodPrice = NULL;
   
+  // $deliveryValue - количество килограмм, $everyKgPrice - цена доставки за килограмм,
+  // $periodLimit - граница разграничения первого и второго диапазонов для формирования цены
+  // $firstPeriodPrice, $secondPeriodPrice - цены диапазонов
   public function __construct($deliveryValue = 0, $everyKgPrice = 0, $periodLimit = NULL, $firstPeriodPrice = NULL, $secondPeriodPrice = NULL)
   {
     $this->deliveryValue = (is_numeric($deliveryValue) && $deliveryValue >= 0) ? $deliveryValue : 0;
